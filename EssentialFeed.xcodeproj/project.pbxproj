@@ -16,6 +16,7 @@
 		F88B32B826DFC7B00033A82C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B32B726DFC7B00033A82C /* HTTPClient.swift */; };
 		F88B32BA26DFC82B0033A82C /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B32B926DFC82B0033A82C /* FeedItemsMapper.swift */; };
 		F88B32BD26E662970033A82C /* URLHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B32BC26E662970033A82C /* URLHTTPClientTests.swift */; };
+		F88B32C026E681AA0033A82C /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B32BF26E681AA0033A82C /* XCTestCase+MemoryLeakTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		F88B32B726DFC7B00033A82C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		F88B32B926DFC82B0033A82C /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 		F88B32BC26E662970033A82C /* URLHTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHTTPClientTests.swift; sourceTree = "<group>"; };
+		F88B32BF26E681AA0033A82C /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +124,19 @@
 		F88B32BB26DFD0910033A82C /* FeedAPI */ = {
 			isa = PBXGroup;
 			children = (
+				F88B32BE26E681750033A82C /* Helpers */,
 				F88B32B226DCF2280033A82C /* RemoteFeedLoaderTests.swift */,
 				F88B32BC26E662970033A82C /* URLHTTPClientTests.swift */,
 			);
 			path = FeedAPI;
+			sourceTree = "<group>";
+		};
+		F88B32BE26E681750033A82C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F88B32BF26E681AA0033A82C /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 			files = (
 				F88B32BD26E662970033A82C /* URLHTTPClientTests.swift in Sources */,
 				F88B32B326DCF2280033A82C /* RemoteFeedLoaderTests.swift in Sources */,
+				F88B32C026E681AA0033A82C /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
