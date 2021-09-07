@@ -63,7 +63,7 @@ class URLHTTPClientTests: XCTestCase {
                                        response: anyHTTPURLResponse(),
                                        error: anyNSError()))
         XCTAssertNotNil(resultErrorFor(data: anyData(),
-                                       response: nonHTTPURLResponse()  ,
+                                       response: nonHTTPURLResponse(),
                                        error: nil))
     }
     
@@ -132,10 +132,10 @@ class URLHTTPClientTests: XCTestCase {
     }
     
     private func resultFor(data: Data?,
-                                response: URLResponse?,
-                                error: Error?,
-                                file: StaticString = #filePath,
-                                line: UInt = #line) -> HTTPClientResult {
+                           response: URLResponse?,
+                           error: Error?,
+                           file: StaticString = #filePath,
+                           line: UInt = #line) -> HTTPClientResult {
         URLProtocolStub.stub(data: data, response: response, error: error)
         let sut = makeSUT(file: file, line: line)
         let exp = XCTestExpectation(description: "Wait for completion")
