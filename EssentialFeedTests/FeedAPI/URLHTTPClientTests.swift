@@ -100,7 +100,7 @@ class URLHTTPClientTests: XCTestCase {
                                  error: Error?,
                                  file: StaticString = #filePath,
                                  line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
-        let result = resultFor(data: data, response: response, error: error)
+        let result = resultFor(data: data, response: response, error: error, file: file, line: line)
         
         var receivedValues: (data: Data, response: HTTPURLResponse)?
         switch result {
@@ -118,7 +118,7 @@ class URLHTTPClientTests: XCTestCase {
                                 error: Error?,
                                 file: StaticString = #filePath,
                                 line: UInt = #line) -> Error? {
-        let result = resultFor(data: data, response: response, error: error)
+        let result = resultFor(data: data, response: response, error: error, file: file, line: line)
         
         var receivedError: Error?
         switch result {
