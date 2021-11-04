@@ -170,17 +170,17 @@ class RemoteFeedLoaderTests: XCTestCase {
                         when action: () -> Void,
                         file: StaticString = #filePath,
                         line: UInt = #line) {
-        let exp = expectation(description: "Wailt for load completion")
+        let exp = expectation(description: "Wait for load completion")
         
-        sut.load { receivedResault in
-            switch (receivedResault, expectedResult) {
-            case let (.success(receivedItems), .success(expecteItems)):
-                XCTAssertEqual(receivedItems, expecteItems, file: file, line: line)
+        sut.load { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedItems), .success(expectedItems)):
+                XCTAssertEqual(receivedItems, expectedItems, file: file, line: line)
             case let (.failure(receivedErrors as RemoteFeedLoader.Error),
                       .failure(expectedErrors as RemoteFeedLoader.Error)):
                 XCTAssertEqual(receivedErrors, expectedErrors, file: file, line: line)
             default:
-                XCTFail("Expected result \(expectedResult), but got \(receivedResault) instead", file: file, line: line)
+                XCTFail("Expected result \(expectedResult), but got \(receivedResult) instead", file: file, line: line)
             }
             
             exp.fulfill()
