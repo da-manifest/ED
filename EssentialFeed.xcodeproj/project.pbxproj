@@ -132,7 +132,6 @@
 				F88B329326DCEDAA0033A82C /* EssentialFeed.h */,
 				F88B32AF26DCF0620033A82C /* FeedFeature */,
 				F88B329426DCEDAA0033A82C /* Info.plist */,
-				F82B9C7E274CF09600338BA3 /* FeedCache */,
 				F88B32B426DE27AB0033A82C /* FeedAPI */,
 			);
 			path = EssentialFeed;
@@ -143,6 +142,7 @@
 			children = (
 				F88B32BE26E681750033A82C /* Helpers */,
 				F88B32BB26DFD0910033A82C /* FeedAPI */,
+				F82B9C7E274CF09600338BA3 /* FeedCache */,
 				F88B32A026DCEDAA0033A82C /* Info.plist */,
 			);
 			path = EssentialFeedTests;
