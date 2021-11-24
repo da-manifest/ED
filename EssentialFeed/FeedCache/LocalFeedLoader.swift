@@ -7,6 +7,11 @@
 
 import Foundation
 
+private enum Constants {
+    
+    static let maxCacheAgeInDays = 7
+}
+
 public final class LocalFeedLoader {
     
     public typealias SaveResult = Error?
@@ -14,6 +19,7 @@ public final class LocalFeedLoader {
     
     private let store: FeedStore
     private let currentDate: () -> Date
+    private let calendar = Calendar(identifier: .gregorian)
     
     public init(store: FeedStore, currentDate: @escaping () -> Date) {
         self.store = store
@@ -58,8 +64,9 @@ private extension LocalFeedLoader {
     }
     
     func validate(_ timestamp: Date) -> Bool {
-        let calendar = Calendar(identifier: .gregorian)
-        guard let maxCacheAge = calendar.date(byAdding: .day, value: 7, to: timestamp) else {
+        guard let maxCacheAge = calendar.date(byAdding: .day,
+                                              value: Constants.maxCacheAgeInDays,
+                                              to: timestamp) else {
             return false
         }
         return currentDate() < maxCacheAge
