@@ -69,10 +69,10 @@ class CodableFeedStore {
                               timestamp: timestamp)
             let encoded = try encoder.encode(cache)
             try encoded.write(to: storeURL)
+            completion(nil)
         } catch {
             completion(error)
         }
-        completion(nil)
     }
 }
 
