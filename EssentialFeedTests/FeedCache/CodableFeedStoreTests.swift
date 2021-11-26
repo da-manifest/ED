@@ -217,13 +217,13 @@ class CodableFeedStoreTests: XCTestCase {
 // MARK: - Helpers
 private extension CodableFeedStoreTests {
     
-    func makeSUT(storeURL: URL? = nil, file: StaticString = #file, line: UInt = #line) -> CodableFeedStore {
+    func makeSUT(storeURL: URL? = nil, file: StaticString = #file, line: UInt = #line) -> FeedStore {
         let sut = CodableFeedStore(storeURL: storeURL ?? testSpecificStoreURL())
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
     
-    func expect(_ sut: CodableFeedStore, toRetrieve expectedResult: RetrievalCachedFeedResult, file: StaticString = #file, line: UInt = #line) {
+    func expect(_ sut: FeedStore, toRetrieve expectedResult: RetrievalCachedFeedResult, file: StaticString = #file, line: UInt = #line) {
         let exp = expectation(description: "Wait for cache retrieval")
         
         sut.retrieve { retrievedResult in
@@ -243,12 +243,12 @@ private extension CodableFeedStoreTests {
         wait(for: [exp], timeout: 1)
     }
     
-    func expect(_ sut: CodableFeedStore, toRetrieveTwice expectedResult: RetrievalCachedFeedResult, file: StaticString = #file, line: UInt = #line) {
+    func expect(_ sut: FeedStore, toRetrieveTwice expectedResult: RetrievalCachedFeedResult, file: StaticString = #file, line: UInt = #line) {
         expect(sut, toRetrieve: expectedResult, file: file, line: line)
         expect(sut, toRetrieve: expectedResult, file: file, line: line)
     }
     
-    @discardableResult func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore) -> Error? {
+    @discardableResult func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: FeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache insertion")
         
         var insertionError: Error?
@@ -269,7 +269,7 @@ private extension CodableFeedStoreTests {
             .appendingPathComponent("\(type(of: self)).store")
     }
     
-    func deleteCache(from sut: CodableFeedStore) -> Error? {
+    func deleteCache(from sut: FeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache deletion")
         var deletionError: Error?
         
