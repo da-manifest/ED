@@ -8,7 +8,7 @@
 import Foundation
 import EssentialFeed
 
-internal final class FeedStoreSpy: FeedStore {
+ final class FeedStoreSpy: FeedStore {
     
     enum ReceivedMessage: Equatable {
         

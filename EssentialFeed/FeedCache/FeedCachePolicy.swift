@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal enum FeedCachePolicy {
+ enum FeedCachePolicy {
     
     private enum Constants {
         
@@ -16,7 +16,7 @@ internal enum FeedCachePolicy {
     
     private static let calendar = Calendar(identifier: .gregorian)
     
-    internal static func validate(_ timestamp: Date, against date: Date) -> Bool {
+     static func validate(_ timestamp: Date, against date: Date) -> Bool {
         guard let maxCacheAge = calendar.date(byAdding: .day,
                                               value: Constants.maxCacheAgeInDays,
                                               to: timestamp) else {
