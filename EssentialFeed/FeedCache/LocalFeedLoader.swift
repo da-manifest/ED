@@ -47,21 +47,21 @@ extension LocalFeedLoader: FeedLoader {
     
 	public typealias LoadResult = FeedLoader.Result
     
-    public func load(completion: @escaping (LoadResult) -> Void) {
-        store.retrieve { [weak self] result in
-            guard let self = self else { return }
-            
-            switch result {
-            case let .failure(error):
-                completion(.failure(error))
-            case let .found(feed, timestamp)
-                where FeedCachePolicy.validate(timestamp, against: self.currentDate()):
-                completion(.success(feed.toModels()))
-            case .found, .empty:
-                completion(.success([]))
-            }
-        }
-    }
+	public func load(completion: @escaping (LoadResult) -> Void) {
+		store.retrieve { [weak self] result in
+			guard let self = self else { return }
+
+			switch result {
+				case let .failure(error):
+					completion(.failure(error))
+				case let .success(.found(feed, timestamp))
+					where FeedCachePolicy.validate(timestamp, against: self.currentDate()):
+					completion(.success(feed.toModels()))
+				case .success:
+					completion(.success([]))
+			}
+		}
+	}
 }
 
 extension LocalFeedLoader {
@@ -70,17 +70,16 @@ extension LocalFeedLoader {
         store.retrieve { [weak self] result in
             guard let self = self else { return }
             
-            switch result {
-            case .failure:
-                self.store.deleteCachedFeed { _ in }
-            case let .found(_, timestamp)
-                where !FeedCachePolicy.validate(timestamp, against: self.currentDate()):
-                self.store.deleteCachedFeed { _ in }
-            case .empty, .found:
-                break
-            }
-        }
-        
+			switch result {
+				case .failure:
+					self.store.deleteCachedFeed { _ in }
+				case let .success(.found(_, timestamp))
+					where !FeedCachePolicy.validate(timestamp, against: self.currentDate()):
+					self.store.deleteCachedFeed { _ in }
+				case .success:
+					break
+			}
+		}
     }
 }
 
