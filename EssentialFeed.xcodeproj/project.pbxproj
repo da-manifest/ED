@@ -472,7 +472,7 @@
 		F8F359A72A17697B007AAB8D /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				F8F359B42A1785F5007AAB8D /* Models */,
+				F8F359B42A1785F5007AAB8D /* Feed Presentation */,
 				F8F359B12A1779B2007AAB8D /* Composers */,
 				F8F3599B2A176699007AAB8D /* Controllers */,
 				F8F3599C2A1766A0007AAB8D /* Views */,
@@ -504,13 +504,13 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
-		F8F359B42A1785F5007AAB8D /* Models */ = {
+		F8F359B42A1785F5007AAB8D /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				F8F359B52A178602007AAB8D /* FeedViewModel.swift */,
 				F8F359B72A178CF5007AAB8D /* FeedImageViewModel.swift */,
 			);
-			path = Models;
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
