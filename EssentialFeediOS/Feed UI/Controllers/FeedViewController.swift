@@ -30,10 +30,6 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 
 		refresh()
 	}
-
-	func display(_ viewModel: FeedErrorViewModel) {
-		errorView?.message = viewModel.message
-	}
 	
 	override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		tableModel.count
@@ -58,11 +54,11 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 	}
 
 	func display(_ viewModel: FeedLoadingViewModel) {
-		if viewModel.isLoading {
-			refreshControl?.beginRefreshing()
-		} else {
-			refreshControl?.endRefreshing()
-		}
+		refreshControl?.update(isRefreshing: viewModel.isLoading)
+	}
+
+	func display(_ viewModel: FeedErrorViewModel) {
+		errorView?.message = viewModel.message
 	}
 
 	private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
