@@ -1,0 +1,10 @@
+/* 
+  Feed.strings
+  EssentialFeed
+
+  Created by Maksim Khozyashev on 10.07.2023.
+  
+*/
+
+"FEED_VIEW_TITLE" = "Mi Cinta";
+"FEED_VIEW_CONNECTION_ERROR" = "No se pudo conectar al servidor";

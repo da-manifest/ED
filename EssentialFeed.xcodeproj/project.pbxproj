@@ -66,6 +66,7 @@
 		F8CA1B2C2A5C2857008CC0A6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA1B2B2A5C2857008CC0A6 /* ErrorView.swift */; };
 		F8CA1B2F2A5C2EA5008CC0A6 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA1B2E2A5C2EA5008CC0A6 /* FeedErrorViewModel.swift */; };
 		F8CA1B312A5C2EFC008CC0A6 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CA1B302A5C2EFC008CC0A6 /* UIRefreshControl+Helpers.swift */; };
+		F8CA1B342A5C3F85008CC0A6 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8CA1B362A5C3F85008CC0A6 /* Feed.strings */; };
 		F8F359942A1764E4007AAB8D /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F359932A1764E4007AAB8D /* UIImage+TestHelpers.swift */; };
 		F8F359962A17653C007AAB8D /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F359952A17653C007AAB8D /* UIRefreshControl+TestHelpers.swift */; };
 		F8F359982A1765A2007AAB8D /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F359972A1765A2007AAB8D /* UIButton+TestHelpers.swift */; };
@@ -196,6 +197,9 @@
 		F8CA1B2B2A5C2857008CC0A6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F8CA1B2E2A5C2EA5008CC0A6 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		F8CA1B302A5C2EFC008CC0A6 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
+		F8CA1B352A5C3F85008CC0A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		F8CA1B372A5C3F88008CC0A6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Feed.strings; sourceTree = "<group>"; };
+		F8CA1B382A5C3F89008CC0A6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Feed.strings; sourceTree = "<group>"; };
 		F8F359932A1764E4007AAB8D /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		F8F359952A17653C007AAB8D /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		F8F359972A1765A2007AAB8D /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -464,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				F8CA1B272A5C1D9C008CC0A6 /* FeedPresenterTests.swift */,
+				F8CA1B362A5C3F85008CC0A6 /* Feed.strings */,
 			);
 			path = FeedPresentation;
 			sourceTree = "<group>";
@@ -776,6 +781,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA1B342A5C3F85008CC0A6 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,6 +957,16 @@
 				F8C162892A26665900CB0B38 /* en */,
 				F8C1628B2A2666B700CB0B38 /* ru */,
 				F8C1628C2A26678500CB0B38 /* es */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+		F8CA1B362A5C3F85008CC0A6 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8CA1B352A5C3F85008CC0A6 /* en */,
+				F8CA1B372A5C3F88008CC0A6 /* ru */,
+				F8CA1B382A5C3F89008CC0A6 /* es */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
