@@ -9,7 +9,7 @@
 import XCTest
 import EssentialFeed
 
-class URLHTTPClientTests: XCTestCase {
+class URLSessionHTTPClientTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
