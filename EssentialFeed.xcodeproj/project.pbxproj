@@ -79,6 +79,8 @@
 		F8E843E92A5D75E900A48AD4 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E843E82A5D75E900A48AD4 /* HTTPURLResponse+StatusCode.swift */; };
 		F8E843EB2A5D770100A48AD4 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E843EA2A5D770100A48AD4 /* URLProtocolStub.swift */; };
 		F8E843ED2A5D7C5800A48AD4 /* LocalFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E843EC2A5D7C5800A48AD4 /* LocalFeedImageDataLoaderTests.swift */; };
+		F8E843EF2A5D8E3500A48AD4 /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E843EE2A5D8E3500A48AD4 /* FeedImageDataStore.swift */; };
+		F8E843F12A5D8E5000A48AD4 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E843F02A5D8E5000A48AD4 /* LocalFeedImageDataLoader.swift */; };
 		F8F359942A1764E4007AAB8D /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F359932A1764E4007AAB8D /* UIImage+TestHelpers.swift */; };
 		F8F359962A17653C007AAB8D /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F359952A17653C007AAB8D /* UIRefreshControl+TestHelpers.swift */; };
 		F8F359982A1765A2007AAB8D /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F359972A1765A2007AAB8D /* UIButton+TestHelpers.swift */; };
@@ -215,6 +217,8 @@
 		F8E843E82A5D75E900A48AD4 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		F8E843EA2A5D770100A48AD4 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		F8E843EC2A5D7C5800A48AD4 /* LocalFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		F8E843EE2A5D8E3500A48AD4 /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
+		F8E843F02A5D8E5000A48AD4 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		F8F359932A1764E4007AAB8D /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		F8F359952A17653C007AAB8D /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		F8F359972A1765A2007AAB8D /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -311,6 +315,8 @@
 				F82B9C84274D2B0100338BA3 /* FeedStore.swift */,
 				F82B9C88274E364300338BA3 /* LocalFeedImage.swift */,
 				F82B9C97274FAAE800338BA3 /* FeedCachePolicy.swift */,
+				F8E843EE2A5D8E3500A48AD4 /* FeedImageDataStore.swift */,
+				F8E843F02A5D8E5000A48AD4 /* LocalFeedImageDataLoader.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -855,6 +861,7 @@
 				F82B9C83274D2A1D00338BA3 /* LocalFeedLoader.swift in Sources */,
 				F88B32B826DFC7B00033A82C /* HTTPClient.swift in Sources */,
 				F88B32AB26DCEDC90033A82C /* FeedImage.swift in Sources */,
+				F8E843EF2A5D8E3500A48AD4 /* FeedImageDataStore.swift in Sources */,
 				F8CA1B3D2A5C428C008CC0A6 /* FeedPresenter.swift in Sources */,
 				F88B32C226E6982E0033A82C /* URLSessionHTTPClient.swift in Sources */,
 				F8E843E92A5D75E900A48AD4 /* HTTPURLResponse+StatusCode.swift in Sources */,
@@ -863,6 +870,7 @@
 				F8CA1B452A5C432B008CC0A6 /* FeedErrorViewModel.swift in Sources */,
 				F8E843DF2A5D4F6400A48AD4 /* FeedImageDataLoader.swift in Sources */,
 				F8CA1B432A5C4317008CC0A6 /* FeedLoadingViewModel.swift in Sources */,
+				F8E843F12A5D8E5000A48AD4 /* LocalFeedImageDataLoader.swift in Sources */,
 				F8E843DC2A5D4A7B00A48AD4 /* FeedImagePresenter.swift in Sources */,
 				F870953C2A13D480008CAA39 /* ManagedFeedImage.swift in Sources */,
 			);
