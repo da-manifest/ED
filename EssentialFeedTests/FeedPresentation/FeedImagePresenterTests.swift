@@ -78,7 +78,7 @@ final class FeedImagePresenterTests: XCTestCase {
 	}
 
 	func test_didFinishLoadingImageData_displaysRetryOnImageTransformationFail() {
-		let (sut, view) = makeSUT()
+		let (sut, view) = makeSUT(imageTransformer: fail)
 		let image = uniqueImage()
 		let data = Data()
 
@@ -91,6 +91,10 @@ final class FeedImagePresenterTests: XCTestCase {
 		XCTAssertEqual(message?.isLoading, false)
 		XCTAssertEqual(message?.shouldRetry, true)
 		XCTAssertNil(message?.image)
+	}
+
+	private var fail: (Data) -> Any? {
+		return { _ in nil }
 	}
 
 	private final class ViewSpy: FeedImageView {
