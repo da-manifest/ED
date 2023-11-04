@@ -19,6 +19,7 @@
 		F84184F02AEE7A5700A29E67 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F84184ED2AEE7A5700A29E67 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F84184F12AEE7A5700A29E67 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84184EE2AEE7A5700A29E67 /* EssentialFeediOS.framework */; };
 		F84184F22AEE7A5700A29E67 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F84184EE2AEE7A5700A29E67 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8A5B0022AF660C40054BDBF /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5B0012AF660C40054BDBF /* FeedLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		F84184DF2AEE790800A29E67 /* EssentialAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F84184ED2AEE7A5700A29E67 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84184EE2AEE7A5700A29E67 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A5B0012AF660C40054BDBF /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		F84184D22AEE790800A29E67 /* EssentialAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				F8A5B0012AF660C40054BDBF /* FeedLoaderWithFallbackComposite.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 					};
 					F84184CE2AEE790800A29E67 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 						TestTargetID = F84184B82AEE790700A29E67;
 					};
 					F84184D82AEE790800A29E67 = {
@@ -299,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A5B0022AF660C40054BDBF /* FeedLoaderWithFallbackComposite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +524,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X3YXN8MS3X;
@@ -528,6 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.EssentialAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EssentialApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EssentialApp";
@@ -539,6 +546,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X3YXN8MS3X;
